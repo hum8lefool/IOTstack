@@ -1,0 +1,15 @@
+  jellyfin:
+    image: linuxserver/jellyfin
+    container_name: jellyfin
+    user:1000:1000
+    network_mode: host
+    volumes:
+      - ./volumes/jellyfin/config:/config
+      - ./volumes/jellyfin/cache:/cache
+      - ./volumes/jellyfin/media:/media
+      #- ~/mnt/HDD/tvseries:/tv
+      #- ~/mnt/HDD/movies:/movies
+    devices:
+    # RPi 4 Hardware Acceleration
+    - /dev/vchiq:/dev/vchiq
+    restart: unless-stopped
