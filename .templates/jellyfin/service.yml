@@ -7,8 +7,6 @@
       - ./volumes/jellyfin/config:/config
       - ./volumes/jellyfin/cache:/cache
       - ./volumes/jellyfin/media:/media
-      #- ~/mnt/HDD/tvseries:/tv
-      #- ~/mnt/HDD/movies:/movies
     devices:
     # RPi 4 Hardware Acceleration
     - /dev/vchiq:/dev/vchiq
