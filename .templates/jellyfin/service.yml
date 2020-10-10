@@ -1,7 +1,7 @@
   jellyfin:
     image: linuxserver/jellyfin
     container_name: jellyfin
-    user:1000:1000
+    user: 1000:1000
     network_mode: host
     volumes:
       - ./volumes/jellyfin/config:/config
