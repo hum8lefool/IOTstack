@@ -8,8 +8,8 @@
       - "6680:6680"
       - "5555:5555/udp"
     volumes:
+      - ./services/mopidy/mopidy.conf:/config/mopidy.conf
       - ./volumes/mopidy/local:/var/lib/mopidy/local
-      - ./volumes/mopidy/mopidy.conf:/config/mopidy.conf
       - ./volumes/mopidy/media:/var/lib/mopidy/media:ro
     devices:
     # RPi 4 Sound Device
