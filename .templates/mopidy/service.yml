@@ -1,5 +1,5 @@
   mopidy:
-    image: wernight/mopidy
+    build: ./services/mopidy/.
     container_name: mopidy
     user: 1000:1000
     # Run as root in case of issues
