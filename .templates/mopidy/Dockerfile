@@ -22,10 +22,11 @@ RUN set -ex \
         mopidy \
         mopidy-soundcloud \
         mopidy-spotify \
- && curl -L https://bootstrap.pypa.io/get-pip.py | python - \
+ && curl -L https://bootstrap.pypa.io/get-pip.py | python3 - \
  && pip install -U six pyasn1 \
  && pip install \
         Mopidy-Iris \
+        Mopidy-Local \
         Mopidy-Jellyfin \
         Mopidy-Party \
         Mopidy-Youtube \
