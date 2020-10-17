@@ -1,5 +1,8 @@
   mopidy:
+    #Build image from Dockerfile
     build: ./services/mopidy/.
+    #Uncomment below line to use pre-built image
+    #image: hum8lefool/mopidy
     container_name: mopidy
     user: 1000:1000
     # Run as root in case of issues
@@ -12,6 +15,5 @@
       - ./volumes/mopidy/local:/var/lib/mopidy/local
       - ./volumes/mopidy/media:/var/lib/mopidy/media:ro
     devices:
-    # RPi 4 Sound Device
-    - /dev/snd:/dev/snd
+      - /dev/snd:/dev/snd
     restart: unless-stopped
