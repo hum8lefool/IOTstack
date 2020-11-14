@@ -1,0 +1,9 @@
+  raspotify:
+    image: hum8lefool/raspotify
+    container_name: raspotify
+    network_mode: "host"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    devices:
+    - /dev/snd:/dev/snd
+    restart: unless-stopped
